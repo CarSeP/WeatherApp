@@ -1,0 +1,174 @@
+html,
+body {
+    background-color: #777777;
+}
+
+* {
+    color: #abb2bf;
+}
+
+.app {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.app-container {
+    width: 400px;
+    height: 550px;
+    background-color: #333333;
+    border-radius: 10px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.input-container {
+    height: 30px;
+    background-color: #5c6370;
+    display: flex;
+    margin: 25px;
+    border-radius: 12px;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+.svg {
+    width: 20px;
+    fill: #abb2bf;
+    padding: 5px;
+    border-radius: 12px;
+    user-select: none;
+}
+
+.input {
+    background-color: #5c6370;
+    padding: 0;
+    width: 90%;
+    border: 0;
+    outline: none;
+}
+
+.svg:hover {
+    background-color: #7e8695;
+}
+
+.card {
+    color: white;
+    width: 400px;
+    height: 550px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-title {
+    text-shadow: 2px 2px 4px #000000;
+    height: 37px;
+}
+
+.card-img {
+    width: 120px;
+    margin: 20px;
+    user-select: none;
+}
+
+.card-temp {
+    font-size: 40px;
+    margin: 0;
+}
+
+.card-text {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.card-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-container span {
+    display: block;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card-container-img {
+    width: 70px;
+    user-select: none;
+}
+
+#text{
+    margin-top: 200px;
+}
+
+#container{
+    display: none;
+}
+
+.loader-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    z-index: 1;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #5c6370;
+    border-top: 5px solid transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+.app-container{
+    transform: translate(-50%, -50%);
+}
+.card{
+    box-shadow: none;
+}
+.app{
+    background-color: #333333;
+}
+}
+@media only screen and (max-height: 800px) {
+    .app-container{
+        transform: translate(-50%, -50%);
+    }
+}
