@@ -1,10 +1,14 @@
+import { useTranslation } from 'react-i18next';
+
 function Search() {
+  const { t } = useTranslation();
+
   return (
     <div className="mb-8">
       <form className="flex items-center">
         <input
           type="text"
-          placeholder="Search city or country"
+          placeholder={t("inputPlaceholder")}
           className="w-full px-4 py-2 rounded-l-full opacity text-white placeholder-white placeholder-opacity-75 focus:outline-none focus:ring-2 focus:ring-white"
         />
         <button

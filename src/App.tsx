@@ -6,12 +6,22 @@ import HeaderCard from "./components/HeaderCard";
 import Search from "./components/search";
 import TemperatureCard from "./components/TemperatureCard";
 import { data } from "./interfaces/data";
+import i18n from "./i18n";
 
 function App() {
   const [data, setData] = useState<data>({});
   const [isLoading, setIsLoading] = useState(false);
 
+   const handleLanguage = () => {
+    const userLang = navigator.language
+    const lang = userLang.startsWith('es') ? 'es' : 'en';
+
+    i18n.changeLanguage(lang);
+  };
+
   useEffect(() => {
+    handleLanguage()
+
     const fetchWeather = async () => {
       try {
         const apiKey = import.meta.env.VITE_API_KEY;
